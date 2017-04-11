@@ -1,0 +1,15 @@
+3102c4cab41e6865ca04a557a09c382a *DESCRIPTION
+959d7ad17eb0ee2d17698e930dc47bb8 *NAMESPACE
+05e46f4d531cccabe3fa5594bc9d1f14 *NEWS.md
+47b075d682e8c1bdf71e62b13abc414f *R/fuzzy_w.R
+2f3a2682f0df0c5b41e2120cf80903b3 *R/package.R
+9782ef13aa405ad11c7ec0633ea9d459 *README.md
+7fda47152b7d62e9f4c93f063e2ef816 *man/FuzzExtract.Rd
+50e64031f96ba67345e7f50098e8cf5a *man/FuzzMatcher.Rd
+f6c6e899d1bd74631c0bf4470e61863b *man/FuzzUtils.Rd
+86394e5a36c9cf64259595561728a5c1 *man/GetCloseMatches.Rd
+8cdebf65ac8511f973bc55a614207acc *man/SequenceMatcher.Rd
+78efee3a37a9a6a51d65de7f9a54b727 *man/check_availability.Rd
+baa88605ebb2293bba3f23bc3cb2c9b6 *man/check_scorer.Rd
+712874beafe9a48191d24cf9c2ba2f68 *tests/testthat.R
+504cd88c45e08bea4e8f16a44d9f847d *tests/testthat/test_package.R
