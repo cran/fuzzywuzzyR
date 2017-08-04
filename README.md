@@ -2,7 +2,7 @@
 ## fuzzywuzzyR
 <br>
 
-The **fuzzywuzzyR** package is a fuzzy string matching implemenation of the [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) python package. It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to calculate the differences between sequences.
+The **fuzzywuzzyR** package is a fuzzy string matching implemenation of the [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) python package. It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to calculate the differences between sequences. More details on the functionality of the fuzzywuzzyR can be found in the package Vignette.
 
 
 <br>
@@ -104,3 +104,18 @@ install.packages('fuzzywuzzyR')
 ```
 <br>
 
+and to download the latest version from Github use the *install_github* function of the devtools package,
+<br><br>
+
+```R
+
+devtools::install_github(repo = 'mlampros/fuzzywuzzyR')
+
+```
+<br>
+Use the following link to report bugs/issues,
+<br><br>
+
+[https://github.com/mlampros/fuzzywuzzyR/issues](https://github.com/mlampros/fuzzywuzzyR/issues)
+
+<br>
