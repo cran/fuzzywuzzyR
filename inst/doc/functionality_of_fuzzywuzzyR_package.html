@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -12,7 +12,7 @@
 
 <meta name="author" content="Lampros Mouselimis" />
 
-<meta name="date" content="2017-08-04" />
+<meta name="date" content="2018-01-18" />
 
 <title>Functionality of the fuzzywuzzyR package</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Functionality of the fuzzywuzzyR package</h1>
 <h4 class="author"><em>Lampros Mouselimis</em></h4>
-<h4 class="date"><em>2017-08-04</em></h4>
+<h4 class="date"><em>2018-01-18</em></h4>
 
 
 
@@ -193,9 +193,9 @@ choices =<span class="st"> </span><span class="kw">c</span>(<span class="st">&qu
 <span class="co"># processor :</span>
 <span class="co">#------------</span>
 
-init_proc =<span class="st"> </span>FuzzUtils$<span class="kw">new</span>()      <span class="co"># initialization of FuzzUtils class to choose a processor</span>
+init_proc =<span class="st"> </span>FuzzUtils<span class="op">$</span><span class="kw">new</span>()      <span class="co"># initialization of FuzzUtils class to choose a processor</span>
 
-PROC =<span class="st"> </span>init_proc$Full_process    <span class="co"># processor-method</span>
+PROC =<span class="st"> </span>init_proc<span class="op">$</span>Full_process    <span class="co"># processor-method</span>
 
 PROC1 =<span class="st"> </span>tolower                  <span class="co"># base R function ( as an example for a processor )</span>
 
@@ -203,14 +203,14 @@ PROC1 =<span class="st"> </span>tolower                  <span class="co"># base
 <span class="co"># scorer :</span>
 <span class="co">#---------</span>
 
-init_scor =<span class="st"> </span>FuzzMatcher$<span class="kw">new</span>()    <span class="co"># initialization of the scorer class</span>
+init_scor =<span class="st"> </span>FuzzMatcher<span class="op">$</span><span class="kw">new</span>()    <span class="co"># initialization of the scorer class</span>
 
-SCOR =<span class="st"> </span>init_scor$WRATIO          <span class="co"># choosen scorer function</span>
+SCOR =<span class="st"> </span>init_scor<span class="op">$</span>WRATIO          <span class="co"># choosen scorer function</span>
 
 
-init &lt;-<span class="st"> </span>FuzzExtract$<span class="kw">new</span>()        <span class="co"># Initialization of the FuzzExtract class</span>
+init &lt;-<span class="st"> </span>FuzzExtract<span class="op">$</span><span class="kw">new</span>()        <span class="co"># Initialization of the FuzzExtract class</span>
 
-init$<span class="kw">Extract</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC, <span class="dt">scorer =</span> SCOR)</code></pre></div>
+init<span class="op">$</span><span class="kw">Extract</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC, <span class="dt">scorer =</span> SCOR)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># example output</span>
   
   [[<span class="dv">1</span>]]
@@ -245,7 +245,7 @@ init$<span class="kw">Extract</span>(<span class="dt">string =</span> word, <spa
 [<span class="dv">1</span>] <span class="dv">22</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># extracts best matches (limited to 2 matches)</span>
 
-init$<span class="kw">ExtractBests</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC1,
+init<span class="op">$</span><span class="kw">ExtractBests</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC1,
 
                   <span class="dt">scorer =</span> SCOR, <span class="dt">score_cutoff =</span> 0L, <span class="dt">limit =</span> 2L)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">[[<span class="dv">1</span>]]
@@ -264,7 +264,7 @@ init$<span class="kw">ExtractBests</span>(<span class="dt">string =</span> word,
 [<span class="dv">1</span>] <span class="dv">79</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># extracts matches without keeping the output order</span>
 
-init$<span class="kw">ExtractWithoutOrder</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC,
+init<span class="op">$</span><span class="kw">ExtractWithoutOrder</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC,
 
                          <span class="dt">scorer =</span> SCOR, <span class="dt">score_cutoff =</span> 0L)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">[[<span class="dv">1</span>]]
@@ -299,7 +299,7 @@ init$<span class="kw">ExtractWithoutOrder</span>(<span class="dt">string =</span
 [<span class="dv">1</span>] <span class="dv">22</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># extracts first result </span>
 
-init$<span class="kw">ExtractOne</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC,
+init<span class="op">$</span><span class="kw">ExtractOne</span>(<span class="dt">string =</span> word, <span class="dt">sequence_strings =</span> choices, <span class="dt">processor =</span> PROC,
 
                 <span class="dt">scorer =</span> SCOR, <span class="dt">score_cutoff =</span> 0L)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">[[<span class="dv">1</span>]]
@@ -315,7 +315,7 @@ init$<span class="kw">ExtractOne</span>(<span class="dt">string =</span> word, <
              <span class="st">'F. Baggins'</span>, <span class="st">'Frody Baggins'</span>, <span class="st">'Bilbo Baggins'</span>)
 
 
-init$<span class="kw">Dedupe</span>(<span class="dt">contains_dupes =</span> duplicat, <span class="dt">threshold =</span> 70L, <span class="dt">scorer =</span> SCOR)</code></pre></div>
+init<span class="op">$</span><span class="kw">Dedupe</span>(<span class="dt">contains_dupes =</span> duplicat, <span class="dt">threshold =</span> 70L, <span class="dt">scorer =</span> SCOR)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">[<span class="dv">1</span>] <span class="st">&quot;Frodo Baggins&quot;</span>     <span class="st">&quot;Samuel L. Jackson&quot;</span> <span class="st">&quot;Bilbo Baggins&quot;</span>     <span class="st">&quot;Tom Sawyer&quot;</span></code></pre></div>
 <p><br></p>
 </div>
@@ -327,39 +327,39 @@ init$<span class="kw">Dedupe</span>(<span class="dt">contains_dupes =</span> dup
 
 s2 =<span class="st"> &quot;New York Jets&quot;</span>
 
-init =<span class="st"> </span>FuzzMatcher$<span class="kw">new</span>()          initialization of FuzzMatcher class
+init =<span class="st"> </span>FuzzMatcher<span class="op">$</span><span class="kw">new</span>()          initialization of FuzzMatcher class
 
-init$<span class="kw">Partial_token_set_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
+init<span class="op">$</span><span class="kw">Partial_token_set_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
 
 <span class="co"># example output</span>
 
 [<span class="dv">1</span>] <span class="dv">31</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">Partial_token_sort_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">Partial_token_sort_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
 
 
 [<span class="dv">1</span>] <span class="dv">31</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">Ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">Ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
 
 [<span class="dv">1</span>] <span class="dv">21</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">QRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">QRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">WRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">WRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">UWRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">UWRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">UQRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">UQRATIO</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">Token_sort_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">Token_sort_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">Partial_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">Partial_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
 
 [<span class="dv">1</span>] <span class="dv">23</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">Token_set_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">Token_set_ratio</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>, <span class="dt">full_process =</span> <span class="ot">TRUE</span>)
 
 [<span class="dv">1</span>] <span class="dv">29</span></code></pre></div>
 <p><br></p>
@@ -371,9 +371,9 @@ init$<span class="kw">Partial_token_set_ratio</span>(<span class="dt">string1 =<
 <p><br></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 =<span class="st"> 'Frodo Baggins'</span>
 
-init =<span class="st"> </span>FuzzUtils$<span class="kw">new</span>()
+init =<span class="st"> </span>FuzzUtils<span class="op">$</span><span class="kw">new</span>()
 
-init$<span class="kw">Full_process</span>(<span class="dt">string =</span> s1, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)</code></pre></div>
+init<span class="op">$</span><span class="kw">Full_process</span>(<span class="dt">string =</span> s1, <span class="dt">force_ascii =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># example output</span>
 
 [<span class="dv">1</span>] <span class="st">&quot;frodo baggins&quot;</span></code></pre></div>
@@ -401,15 +401,15 @@ str1 =<span class="st"> 'Fra Bagg'</span>
 
 s2 =<span class="st"> ' It was a murky and stormy night. I was all alone sitting on a crimson chair.'</span>
 
-init =<span class="st"> </span>SequenceMatcher$<span class="kw">new</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
+init =<span class="st"> </span>SequenceMatcher<span class="op">$</span><span class="kw">new</span>(<span class="dt">string1 =</span> s1, <span class="dt">string2 =</span> s2)
 
-init$<span class="kw">ratio</span>()
-
-[<span class="dv">1</span>] <span class="fl">0.9127517</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">quick_ratio</span>()
+init<span class="op">$</span><span class="kw">ratio</span>()
 
 [<span class="dv">1</span>] <span class="fl">0.9127517</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init$<span class="kw">real_quick_ratio</span>()
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">quick_ratio</span>()
+
+[<span class="dv">1</span>] <span class="fl">0.9127517</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">init<span class="op">$</span><span class="kw">real_quick_ratio</span>()
 
 [<span class="dv">1</span>] <span class="fl">0.966443</span> </code></pre></div>
 <p><br></p>
@@ -417,19 +417,19 @@ init$<span class="kw">ratio</span>()
 <p><br></p>
 <p>A last think to note here is that the mentioned fuzzy string matching classes can be parallelized using the base R <em>parallel</em> package. For instance, the following <em>MCLAPPLY_RATIOS</em> function can take two vectors of character strings (QUERY1, QUERY2) and return the scores for each method of the <em>FuzzMatcher</em> class,</p>
 <p><br></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">MCLAPPLY_RATIOS =<span class="st"> </span>function(QUERY1, QUERY2, <span class="dt">class_fuzz =</span> <span class="st">'FuzzMatcher'</span>, <span class="dt">method_fuzz =</span> <span class="st">'QRATIO'</span>, <span class="dt">threads =</span> <span class="dv">1</span>, ...) {
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">MCLAPPLY_RATIOS =<span class="st"> </span><span class="cf">function</span>(QUERY1, QUERY2, <span class="dt">class_fuzz =</span> <span class="st">'FuzzMatcher'</span>, <span class="dt">method_fuzz =</span> <span class="st">'QRATIO'</span>, <span class="dt">threads =</span> <span class="dv">1</span>, ...) {
 
   init &lt;-<span class="st"> </span><span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text =</span> <span class="kw">paste0</span>(class_fuzz, <span class="st">'$new()'</span>)))
 
   METHOD =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">'init$'</span>, method_fuzz)
 
-  if (threads ==<span class="st"> </span><span class="dv">1</span>) {
+  <span class="cf">if</span> (threads <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) {
 
-    res_qrat =<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(QUERY1), function(x) <span class="kw">do.call</span>(<span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text =</span> METHOD)), <span class="kw">list</span>(QUERY1[[x]], QUERY2[[x]], ...)))}
+    res_qrat =<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(QUERY1), <span class="cf">function</span>(x) <span class="kw">do.call</span>(<span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text =</span> METHOD)), <span class="kw">list</span>(QUERY1[[x]], QUERY2[[x]], ...)))}
 
-  else {
+  <span class="cf">else</span> {
 
-    res_qrat =<span class="st"> </span>parallel::<span class="kw">mclapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(QUERY1), function(x) <span class="kw">do.call</span>(<span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text =</span> METHOD)), <span class="kw">list</span>(QUERY1[[x]], QUERY2[[x]], ...)), <span class="dt">mc.cores =</span> threads)
+    res_qrat =<span class="st"> </span>parallel<span class="op">::</span><span class="kw">mclapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(QUERY1), <span class="cf">function</span>(x) <span class="kw">do.call</span>(<span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text =</span> METHOD)), <span class="kw">list</span>(QUERY1[[x]], QUERY2[[x]], ...)), <span class="dt">mc.cores =</span> threads)
   }
 
   <span class="kw">return</span>(res_qrat)
@@ -455,7 +455,7 @@ quer_res =<span class="st"> </span><span class="kw">MCLAPPLY_RATIOS</span>(query
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
