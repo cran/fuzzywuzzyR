@@ -1,8 +1,8 @@
 Package: fuzzywuzzyR
 Type: Package
 Title: Fuzzy String Matching
-Version: 1.0.2
-Date: 2018-01-18
+Version: 1.0.3
+Date: 2018-02-26
 Author: Lampros Mouselimis <mouselimislampros@gmail.com>
 Maintainer: Lampros Mouselimis <mouselimislampros@gmail.com>
 BugReports: https://github.com/mlampros/fuzzywuzzyR/issues
@@ -21,6 +21,6 @@ LazyData: true
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2018-01-18 09:44:59 UTC; lampros
+Packaged: 2018-02-26 12:52:43 UTC; lampros
 Repository: CRAN
-Date/Publication: 2018-01-18 10:04:30 UTC
+Date/Publication: 2018-02-26 14:19:25 UTC

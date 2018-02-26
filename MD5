@@ -1,13 +1,13 @@
-cceaf8acee46681a4efe75ceb2ba713b *DESCRIPTION
+3016bf81fc98643b157c12072a2d9f50 *DESCRIPTION
 959d7ad17eb0ee2d17698e930dc47bb8 *NAMESPACE
-9685a76328f25dea9a9d0287118d515d *NEWS.md
+533f5477fcd77f4b62ddbf482842e17f *NEWS.md
 4a3f84fddb72dd6207281d089976668c *R/fuzzy_w.R
 0750ffdbd12c7abc1a91867ca02820c5 *R/package.R
-61a54c702b6db80d7bf2181ddcb7a275 *README.md
+36540f1f42632488a42d60247efe62c8 *README.md
 da8469407ce6c719feb46e063faab1cb *build/vignette.rds
 2a48e1fbcfe5d11cc30e916c77159d74 *inst/doc/functionality_of_fuzzywuzzyR_package.R
 8eb4087e6ad42b26332c754c1aa027a0 *inst/doc/functionality_of_fuzzywuzzyR_package.Rmd
-68bd2c64124ae83e997959b7c76677c9 *inst/doc/functionality_of_fuzzywuzzyR_package.html
+3fe56690a126e43d2d5170093240b445 *inst/doc/functionality_of_fuzzywuzzyR_package.html
 50c85b0cbe7ee6ebe8f1e297a8b14e4a *man/FuzzExtract.Rd
 47be4a794e28c6889016eaa3097704ae *man/FuzzMatcher.Rd
 347b443a73fb6841027f5a18769aa5e2 *man/FuzzUtils.Rd
@@ -17,5 +17,5 @@ da8469407ce6c719feb46e063faab1cb *build/vignette.rds
 d38d5d4244725d63f6eb168e7a2af4d1 *man/check_scorer.Rd
 8d44c1ac8d3aa78200f3aacc1ebe7d2d *man/is_python2.Rd
 712874beafe9a48191d24cf9c2ba2f68 *tests/testthat.R
-372f99d0221f0fc7a77ea62ddc1ed453 *tests/testthat/test_package.R
+263010ff5c721e867c29e4f09886cc54 *tests/testthat/test_package.R
 8eb4087e6ad42b26332c754c1aa027a0 *vignettes/functionality_of_fuzzywuzzyR_package.Rmd
