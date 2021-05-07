@@ -1,10 +1,13 @@
 
-
 ## fuzzywuzzyR
 <br>
 
-The **fuzzywuzzyR** package is a fuzzy string matching implemenation of the [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) python package. It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to calculate the differences between sequences. More details on the functionality of fuzzywuzzyR can be found in the package Vignette.
+The **fuzzywuzzyR** package is a fuzzy string matching implemenation of the [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) python package. It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to calculate the differences between sequences. More details on the functionality of fuzzywuzzyR can be found in the [blog-post](http://mlampros.github.io/2017/04/13/fuzzywuzzyR_package/) and in the package Vignette.
 
+
+<br>
+
+**UPDATE 26-07-2018**: A [Singularity image file](http://mlampros.github.io/2018/07/26/singularity_containers/) is available in case that someone intends to run *fuzzywuzzyR* on Ubuntu Linux (locally or in a cloud instance) with all package requirements pre-installed. This allows the user to utilize the *fuzzywuzzyR* package without having to spend time on the installation process.
 
 <br>
 
@@ -82,7 +85,7 @@ sudo pip install python-Levenshtein
 C:\Python27;C:\Python27\Scripts
 ```
 
-* Install the [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
+* Install the [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)
 * Open the *Command prompt* and use the following commands:
 ```R
 pip install fuzzywuzzy
